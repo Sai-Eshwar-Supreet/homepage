@@ -23,7 +23,7 @@ git clone https://github.com/Sai-Eshwar-Supreet/homepage.git
 
 ## Acknowledgements
 
-- This project was completed as part of **[The Odin Project – JavaScript Course](https://www.theodinproject.com/)**
+- This project was completed as part of **[The Odin Project – Advanced HTML and CSS](https://www.theodinproject.com/)**
 - Icons are sourced from:
   - https://devicon.dev/
   - https://materialdesignicons.com/
