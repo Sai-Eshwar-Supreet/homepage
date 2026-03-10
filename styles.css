@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5{
 }
 
 .section{
-    padding: 16px;
+    padding: 16px 32px;
     min-height: 100vh;
 }
 
@@ -62,24 +62,24 @@ h1, h2, h3, h4, h5{
 }
 
 h1{
-    font-size: 4rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
     font-weight: 600;
     margin-bottom: 32px;
 }
 
 h2{
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
     font-weight: 600;
     margin-bottom: 24px;
 }
 
 h3{
-    font-size: 2.5rem;
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
     margin-bottom: 16px;
 }
 
 p{
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
     margin-bottom: 8px;
 }
 
@@ -91,11 +91,6 @@ p{
 }
 
 /* About */
-
-.section{
-    padding-left: 64px;
-    padding-right: 64px;
-}
 
 .about{
     position: relative;
@@ -109,6 +104,7 @@ p{
 .hero{
     position: relative;
     float: left;
+    margin-right: 16px ;
 }
 
 .hero h1{
@@ -116,6 +112,7 @@ p{
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 4px;
     
     color: white;
     text-align: center;
@@ -124,7 +121,6 @@ p{
 .hero img{
     width: 100%;
     max-width: 500px;
-    margin-right: 16px ;
     min-height: 700px;
 }
 
@@ -158,7 +154,7 @@ a:hover{
 .games-container{
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
 
 }
 
@@ -225,11 +221,8 @@ a:hover{
     margin-bottom: 16px;
 }
 
-@media (max-width:1024px) and (min-width:768px){
+@media (max-width:1024px) and (min-width:769px){
     .hero h1{
-
-        font-size: 3rem;
-
         position: absolute;
         top: 0;
         right: 0;
@@ -246,6 +239,14 @@ a:hover{
     }
 }
 @media (max-width:768px){
+    .section{
+        padding: 8px;
+    }
+
+    .games-container{
+        grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+    }
+
     .about-wrapper{
         display: flex;
         flex-direction: column;
@@ -256,6 +257,11 @@ a:hover{
 
     .hero{
         float: none;
+        margin-right: 0;
+    }
+
+    .hero img{
+        min-height: auto;
     }
 
     .about-content{
