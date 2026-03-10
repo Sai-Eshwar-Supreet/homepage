@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5{
     height: auto;
 }
 
+.icon img, .icon svg{
+    transition: transform 0.25s ease;
+}
+
 .icon a{
     display: inline-block;
     width: 100%;
@@ -75,7 +79,7 @@ h3{
 }
 
 p{
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     margin-bottom: 8px;
 }
 
@@ -91,7 +95,6 @@ p{
 .section{
     padding-left: 64px;
     padding-right: 64px;
-    overflow-x: hidden;
 }
 
 .about{
@@ -119,13 +122,13 @@ p{
 }
 
 .hero img{
+    width: 100%;
+    max-width: 500px;
     margin-right: 16px ;
-    height: 800px;
-    width: 600px;
+    min-height: 700px;
 }
 
 .about-content{
-    display: block;
     padding: 16px;
     margin-top: 128px;
     background-color: white;
@@ -161,7 +164,6 @@ a:hover{
 
 .game-card{
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.15);
-    transition: all 0.25s ease;
     padding: 16px;
     background-color: white;
 }
@@ -170,7 +172,7 @@ a:hover{
     width: 100%;
     object-fit: contain;
     object-position: center;
-    transition: all 0.25s ease;
+    transition: border-radius 0.25s ease;
 }
 
 .game-card header{
@@ -223,7 +225,7 @@ a:hover{
     margin-bottom: 16px;
 }
 
-@media (max-width:1400px) and (min-width:1190px){
+@media (max-width:1024px) and (min-width:768px){
     .hero h1{
 
         font-size: 3rem;
@@ -232,13 +234,18 @@ a:hover{
         top: 0;
         right: 0;
 
-        transform: translate(100%, 20px);
+        transform: translate(100%, 0);
         
         color: white;
         text-align: left;
     }
+
+    .hero img{
+        max-width: 300px;
+        min-height: 400px;
+    }
 }
-@media (max-width:1190px){
+@media (max-width:768px){
     .about-wrapper{
         display: flex;
         flex-direction: column;
